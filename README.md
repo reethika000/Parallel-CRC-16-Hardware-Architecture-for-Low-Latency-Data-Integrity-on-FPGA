@@ -1,0 +1,1 @@
+# Parallel-CRC-16-Hardware-Architecture-for-Low-Latency-Data-Integrity-on-FPGA
