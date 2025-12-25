@@ -1,6 +1,6 @@
 Verilog — Top CRC Design
 // MAIN MODULE CRC DESIGN
-module top_crc_design (
+```module top_crc_design (
 input  wire clk,
 input  wire reset_rtl_0,
 input  wire [7:0] data_in,
@@ -32,7 +32,7 @@ crc_parallel crc_inst (
 endmodule
 
 Verilog — CRC Parallel
-module crc_parallel(clk1,clk2,data_in,clear,crc_out);
+```module crc_parallel(clk1,clk2,data_in,clear,crc_out);
 input clk1,clk2;
 input [7:0] data_in;
 input clear;
@@ -99,7 +99,7 @@ assign crc_out = ~crc_temp;
 endmodule
 
 Verilog — Clock Wrapper
-module design_1_wrapper
+```module design_1_wrapper
 (
 clk_100MHz,
 clk_out1_0,
@@ -133,7 +133,7 @@ endmodule
 
 Verilog — Testbench
 
-module tb_crc_parallel;
+```module tb_crc_parallel;
 
 reg clk1, clk2;
 reg [7:0] data_in;
@@ -187,7 +187,7 @@ end
 endmodule
 
 XDC — Constraints File
-set_property -dict { PACKAGE_PIN W5   IOSTANDARD LVCMOS33 } [get_ports clk]
+```set_property -dict { PACKAGE_PIN W5   IOSTANDARD LVCMOS33 } [get_ports clk]
 create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
 
 # Switches
